@@ -16,8 +16,16 @@ h2 {
 }
 
 h3 {
-	font-size: 14px;
+	font-size: 16px;
 	text-align: right;
+	justify-content: center;
+}
+
+button {
+	justify-content: center;
+	text-align: center;
+	padding-left: 12px;
+	width: 70px;
 }
 
 a {
@@ -34,9 +42,10 @@ a:hover {
 }
 
 .logo-text {
-	color: white;
+	color: black;
 	padding-right: 40px;
-  text-align: right;
+  text-align: center;
+	justify-content: center;
 }
 
 .thumbnail-item {
@@ -86,7 +95,7 @@ a:hover {
 }
 
 .detail-image {
-  width: 650px;
+  height: 430px;
 }
 
 .detail-image-title {
@@ -106,4 +115,12 @@ a:hover {
 	text-align:left;
 	justify-content: flex-start;
 	text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
+}
+
+.panel-body {
+	color: black;
+}
+
+.container-fluid {
+	color: black;
 }

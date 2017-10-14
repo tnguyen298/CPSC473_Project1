@@ -1,4 +1,4 @@
-(function (window) {
+/*(function (window) {
   'use strict';
   var App = window.App || {};
   var $ = window.jQuery;
@@ -8,19 +8,16 @@
     }
     this.serverUrl = url;
   }
-
   RemoteDataStore.prototype.add = function(key, val) {
     dpd.users.post(val, function(user, err) {
       if(err) return console.log(err);
       console.log(user);
     });
     /* Used the dpd recommended post to avoid having to pass multiple urls
-
      $.post(this.serverUrl, val, function (serverResponse) {
        console.log(serverResponse);
-    });*/
+    });
   };
-
   RemoteDataStore.prototype.getAll = function(cb) {
     // Code will go here
     $.get(this.serverUrl, function (serverResponse) {
@@ -28,14 +25,12 @@
       cb(serverResponse);
     });
   };
-
   RemoteDataStore.prototype.get = function(key, cb) {
     $.get(this.serverUrl + '/' + key, function(serverResponse) {
       console.log(serverResponse);
       cb(serverResponse);
     });
   };
-
   RemoteDataStore.prototype.remove = function(key) {
     $.ajax(this.serverUrl + '/' + key, {
       type: 'DELETE'
@@ -44,3 +39,4 @@
   App.RemoteDataStore = RemoteDataStore;
   window.App = App;
 })(window);
+*/
