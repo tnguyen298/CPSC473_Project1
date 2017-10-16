@@ -3,11 +3,11 @@
 
 # Team Tadak
 
-James Giang 
-Angel Jimenez 
-Josh Marvel 
-Thao Nguyen 
-Justin Shelley
++ James Giang 
++ Angel Jimenez 
++ Josh Marvel 
++ Thao Nguyen 
++ Justin Shelley
 
 
 
