@@ -107,14 +107,14 @@ In project root directory:
 # User Documentation
 
 Downloading the Source Code:
-+ Please follow the Configuration and Installation Steps, making sure all the software requirements are met.
-+ Please go to https://github.com/aJimmer/FE-Project-1, or https://github.com/tnguyen298/CPSC473_Project1 (Our backup Github)
-+ Clone or download the source code from the Github
-+ Open a terminal, navigate to the root folder of the cloned / downloaded source code
-+ Type the following commands:
+1. Please follow the Configuration and Installation Steps, making sure all the software requirements are met.
+2. Please go to https://github.com/aJimmer/FE-Project-1, or https://github.com/tnguyen298/CPSC473_Project1 (Our backup Github)
+3. Clone or download the source code from the Github
+4. Open a terminal, navigate to the root folder of the cloned / downloaded source code
+5. Type the following commands:
 + $ npm install dpd-fileupload --save 
 + $ dpd -d
-+ On the browser that displays Deployd dashboard, selects Open button on the top right corner to start accessing the page.
+6. On the browser that displays Deployd dashboard, selects Open button on the top right corner to start accessing the page.
 
 Login page 
 + This page will allow user to gain access to post, edit, and review
