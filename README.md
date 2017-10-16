@@ -40,11 +40,11 @@
 
 # Project Scope
 
-Project scope
++ Project scope
 
 Tourism is one of the fastest growing industry in the world. There is a high degree of widening the services in this industry with the help of technology and infrastructure in connection with the globalization process. Following the path of the current market trend, we come up with a project to create an effective way of spreading information on well-known travel destinations that is specially catered to and contributed by the end-users. As such, we would like to introduce a website that allows user to post their travel destination and let other users review and vote on them. This website focuses on famous travel destinations worldwide, not just in America. It also comes with user-friendly and elegant design, helping travelers near and far gather information about a travel destination in a quick, easy, simple, inexpensive, and accurate fashion.
 
-Project functionality 
++ Project functionality 
 
 Our website, Travel Voters, allows travelers near and far to go visit, read up on new trending travel destinations, post their favorite travel destinations, and upload their photo with their post. In addition, they can also vote for the destinations based on their personal criteria. The top 10 most favorite destinations will be featured on the homepage of our website. For privacy concerns, we require the users to login before accessing the page. Membership has always been free and will always be free, for unlimited time!
 
@@ -60,20 +60,20 @@ Our website, Travel Voters, allows travelers near and far to go visit, read up o
 # Installation and Configuration
 
 System requirements 
-Intel or AMD processor (VT-x/AMD-V extension support required)
-At least 8 GB of RAM
-Stable Internet connection (20 Mbps or higher is recommended)
-A 64-bit host operating system 
-Apple's OS X 10.7 or greater
-Microsoft's Windows XP 64 bit or newer
+	+ Intel or AMD processor (VT-x/AMD-V extension support required)
+	+ At least 8 GB of RAM
+	+ Stable Internet connection (20 Mbps or higher is recommended)
+	+ A 64-bit host operating system 
+		Apple's OS X 10.7 or greater
+		Microsoft's Windows XP 64 bit or newer
 Software requirements
-VirtualBox version 5 or greater (not version 4)
-https://www.virtualbox.org/wiki/Downloads
-Ubuntu MATE 64-bit VM
-https://www.dropbox.com/s/9frc9x5blloo7a4/CSUF_Ubuntu_Mate_16_04_01_amd64_20170122.ova?dl=0
-MongoDB
-Deployd
-Internet Browser (Chrome 60 and above is highly recommended)
+	+ VirtualBox version 5 or greater (not version 4)
+	  https://www.virtualbox.org/wiki/Downloads
+	+ Ubuntu MATE 64-bit VM
+	  https://www.dropbox.com/s/9frc9x5blloo7a4/CSUF_Ubuntu_Mate_16_04_01_amd64_20170122.ova?dl=0
+	+ MongoDB
+	+ Deployd
+	+ Internet Browser (Google Chrome 60 and above is highly recommended)
 
 Follow the following steps to obtain MongoDB and Deployd:
 1. Download VirtualBox version 5: https://www.virtualbox.org/wiki/Downloads
