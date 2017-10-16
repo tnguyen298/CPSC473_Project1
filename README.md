@@ -145,12 +145,15 @@ Back-End
 + Deployd
 + MongoDB
 + NodeJS
+
 Development Tools
-+ Atom
++ Atom 
+
 Languages 
 + HTML5
 + JavaScript
-+ CSS3
++ CSS3 
+
 Front-End 
 + Bootstrap 3.3.7
 + Google Fonts APIs
