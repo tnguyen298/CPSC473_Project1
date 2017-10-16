@@ -108,7 +108,7 @@ $ npm install dpd-fileupload --save
 
 Downloading the Source Code:
 + Please follow the Configuration and Installation Steps, making sure all the software requirements are met.
-+ Please go to https://github.com/aJimmer/FE-Project-1 
++ Please go to https://github.com/aJimmer/FE-Project-1, or https://github.com/tnguyen298/CPSC473_Project1 (Our backup Github)
 + Clone or download the source code from the Github
 + Open a terminal, navigate to the root folder of the cloned / downloaded source code
 + Type the following command:
