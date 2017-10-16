@@ -1,7 +1,7 @@
-Travel Voters
+# Travel Voters
 
 
-#Team Tadak
+# Team Tadak
 
 James Giang 
 Angel Jimenez 
@@ -15,7 +15,7 @@ Justin Shelley
 
 
 
-#Overview of the Project
+# Overview of the Project
 
 
 1. Project Scope
@@ -38,7 +38,7 @@ Justin Shelley
 
 
 
-#Project Scope
+# Project Scope
 
 Project scope
 
@@ -57,7 +57,7 @@ Our website, Travel Voters, allows travelers near and far to go visit, read up o
 
 
 
-#Installation and Configuration
+# Installation and Configuration
 
 System requirements 
 Intel or AMD processor (VT-x/AMD-V extension support required)
@@ -108,7 +108,7 @@ Follow the following steps to obtain MongoDB and Deployd:
 
 
 
-#User Documentation
+# User Documentation
 
 Downloading the Source Code:
   Please follow the Configuration and Installation Steps, making sure all the software requirements are met.
@@ -142,7 +142,7 @@ User homepage (or Welcome page)
   User will be able to type in the location, description, rate the location and upload pictures of the destination
 
 
-#Technology We Used
+# Technology We Used
 
 Back-End
     Ajax
@@ -169,7 +169,7 @@ Front-End
 
 
 
-#Reference Links
+# Reference Links
 
 
 http://www.travelandleisure.com/trip-ideas/best-places-to-travel-in-2017
