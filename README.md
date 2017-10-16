@@ -86,19 +86,19 @@ Follow the following steps to obtain MongoDB and Deployd:
 + For Linux/AppleOS, please follow these steps:
 Open terminal
 Enter each command line by line:
-$ sudo apt update
-$ sudo apt install -y mongodb nodejs nodejs-legacy npm
-$ sudo systemctl stop mongodb
-$ sudo systemctl disable mongodb
-$ sudo npm install deployd-cli -g
++ $ sudo apt update
++ $ sudo apt install -y mongodb nodejs nodejs-legacy npm
++ $ sudo systemctl stop mongodb
++ $ sudo systemctl disable mongodb
++ $ sudo npm install deployd-cli -g
 9. Creating a database using Deployd:
 After installing MongoDB, NodeJS, and Deployd, please open the terminal and enter these commands:
-$ dpd create NAME_OF_DATABASE
-$ cd NAME_OF_DATABASE
-$ dpd -d
++ $ dpd create NAME_OF_DATABASE
++ $ cd NAME_OF_DATABASE
++ $ dpd -d
 10. Installing dpd-fileupload:
 In project root directory:
-$ npm install dpd-fileupload --save 
++ $ npm install dpd-fileupload --save 
 11. In Deployd dashboard, create a new Fileupload collection.
 
 
@@ -111,9 +111,9 @@ Downloading the Source Code:
 + Please go to https://github.com/aJimmer/FE-Project-1, or https://github.com/tnguyen298/CPSC473_Project1 (Our backup Github)
 + Clone or download the source code from the Github
 + Open a terminal, navigate to the root folder of the cloned / downloaded source code
-+ Type the following command:
-npm install dpd-fileupload --save 
-dpd -d
++ Type the following commands:
++ $ npm install dpd-fileupload --save 
++ $ dpd -d
 + On the browser that displays Deployd dashboard, selects Open button on the top right corner to start accessing the page.
 
 Login page 
