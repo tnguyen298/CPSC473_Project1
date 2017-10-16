@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Welcome Page</title>
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster">
   <link rel="stylesheet" type="text/css" href="stylesheets\stylesheet.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
   <header class="main-header">
-      <h3>
-        <button class="logo-text" id="logout-btn">Logout</button>
-      </h3>
+    <h3>
+      <button class="logo-text" id="logout-btn">Logout</button>
+      <button type="button" class="logo-text" id="post-btn" data-toggle="modal" data-target="#postModal">Post</button>
+    </h3>
     <h1>Travel Voters</h1>
     <h2>"Traveling—It leaves you speechless, then turns you into a storyteller."</h2>
 
   </header>
   <main class="main-content">
+    <script id="places-template" type="x-tmp-mustache">
+      <li class="thumbnail-item" data-toggle="modal" data-target="#destModal">
+        <a href="{{imageurl}}" data-image-role="trigger" data-image-title="{{name}}" data-image-url="{{imageurl}}" data-image-desc="{{description}}">
+  <img onmouseover="getElementById('preview').src=getElementById('{{name}}').src"
+  id="{{name}}" class="thumbnail-image" src="{{imageurl}}" alt="{{name}}">
+  <span class="thumbnail-title">{{name}}</span>
+</a>
+      </li>
+    </script>
+
+    <ul id="target" class="thumbnail-list"></ul>
+
     <ul class="thumbnail-list">
-      <li class="thumbnail-item">
+
+
+
+
+      <!--
+      <li class="thumbnail-item" data-toggle="modal" data-target="#destModal">
         <a href="img/bali-indonesia.jpg" data-image-role="trigger"
         data-image-title="Bali, Indonesia"
         data-image-url="img/bali-indonesia.jpg"
@@ -28,7 +51,7 @@
       </a>
     </li>
 
-    <li class="thumbnail-item">
+    <li class="thumbnail-item" data-toggle="modal" data-target="#destModal">
       <a href="img/barcelona-spain.jpg" data-image-role="trigger"
       data-image-title="Barcelona, Spain"
       data-image-url="img/barcelona-spain.jpg"
@@ -39,7 +62,7 @@
     </a>
   </li>
 
-  <li class="thumbnail-item">
+  <li class="thumbnail-item" data-toggle="modal" data-target="#destModal">
     <a href="img/belgrade-serbia.jpg" data-image-role="trigger"
     data-image-title="Belgrade, Serbia"
     data-image-url="img/belgrade-serbia.jpg"
@@ -50,7 +73,7 @@
   </a>
 </li>
 
-<li class="thumbnail-item">
+<li class="thumbnail-item" data-toggle="modal" data-target="#destModal">
   <a href="img/copenhagen-denmark.jpg" data-image-role="trigger"
   data-image-title="Copenhagen, Denmark"
   data-image-url="img/copenhagen-denmark.jpg"
@@ -61,7 +84,7 @@
 </a>
 </li>
 
-<li class="thumbnail-item">
+<li class="thumbnail-item" data-toggle="modal" data-target="#destModal">
   <a href="img/dubrovnik-croatia.jpg" data-image-role="trigger"
   data-image-title="Dubrovnik, Croatia"
   data-image-url="img/dubrovnik-croatia.jpg"
@@ -72,7 +95,7 @@
 </a>
 </li>
 
-<li class="thumbnail-item">
+<li class="thumbnail-item" data-toggle="modal" data-target="#destModal">
   <a href="img/guayaquil-ecuador.jpg" data-image-role="trigger"
   data-image-title="Guayaquil, Ecuador"
   data-image-url="img/guayaquil-ecuador.jpg"
@@ -83,18 +106,18 @@
 </a>
 </li>
 
-<li class="thumbnail-item">
+<li class="thumbnail-item" data-toggle="modal" data-target="#destModal">
   <a href="img/hampi-india.jpg" data-image-role="trigger"
   data-image-title="Hampi, India"
   data-image-url="img/hampi-india.jpg"
-  data-image-desc="One of India’s most spectacular monuments will become newly accessible this year with the launch of a high-end resort in Hampi. When the 14th-century capital of the Vijayanagara Empire was constructed, in what is now the southwestern state of Karnataka, it was one of the largest cities in the world. The ruined settlement’s dazzling temples, monuments, and public buildings—strewn across a landscape of giant boulders, banana groves, and rice paddies—have long been a must-visit for dedicated Indophiles. But the town of Hampi has lacked world-class accommodation and infrastructure, making a visit less than luxurious. Now the new Orange County, Hampi offers a solution: 46 rooms spread across a palatial, Vijayanagara-inspired estate less than three miles from the UNESCO World Heritage site area. As Lucy Davis, director of India tour operator Banyan Tours, puts it, “the property is a game-changer for visitors to Hampi.”">
+  data-image-desc="One of India’s most spectacular monuments will become newly accessible this year with the launch of a high-end resort in Hampi. When the 14th-century capital of the Vijayanagara Empire was constructed, in what is now the southwestern state of Karnataka, it was one of the largest cities in the world. The ruined settlement’s dazzling temples, monuments, and public buildings—strewn across a landscape of giant boulders, banana groves, and rice paddies—have long been a must-visit for dedicated Indophiles. But the town of Hampi has lacked world-class accommodation and infrastructure, making a visit less than luxurious. Now the new Orange County, Hampi offers a solution: 46 rooms spread across a palatial, Vijayanagara-inspired estate less than three miles from the UNESCO World Heritage site area. As Lucy Davis, director of India tour operator Banyan Tours, puts it, “the property is a game-changer for visitors to Hampi.">
   <img onmouseover="getElementById('preview').src=getElementById('hampi-india').src"
   id="hampi-india" class="thumbnail-image" src="img/hampi-india.jpg" alt="Hampi, India">
   <span class="thumbnail-title">Hampi, India</span>
 </a>
 </li>
 
-<li class="thumbnail-item">
+<li class="thumbnail-item" data-toggle="modal" data-target="#destModal">
   <a href="img/helsinki-finland.jpg" data-image-role="trigger"
   data-image-title="Helsinki, Finland"
   data-image-url="img/helsinki-finland.jpg"
@@ -105,7 +128,7 @@
 </a>
 </li>
 
-<li class="thumbnail-item">
+<li class="thumbnail-item" data-toggle="modal" data-target="#destModal">
   <a href="img/okinawa-japan.jpg" data-image-role="trigger"
   data-image-title="Okinawa, Japan"
   data-image-url="img/okinawa-japan.jpg"
@@ -116,7 +139,7 @@
 </a>
 </li>
 
-<li class="thumbnail-item">
+<li class="thumbnail-item" data-toggle="modal" data-target="#destModal">
   <a href="img/la-paz-bolivia.jpg" data-image-role="trigger"
   data-image-title="La Paz, Bolivia"
   data-image-url="img/la-paz-bolivia.jpg"
@@ -125,29 +148,113 @@
   id="la-paz-bolivia" class="thumbnail-image" src="img/la-paz-bolivia.jpg" alt="La Paz, Bolivia">
   <span class="thumbnail-title">La Paz, Bolivia</span>
 </a>
-</li>
+</li>-->
+    </ul>
 
-</ul>
-
-<div class="detail-image-container">
-  <div class="detail-image-frame">
-    <img id="preview" class="detail-image" data-image-role="target" src="img/bali-indonesia.jpg" alt="">
-    <br/>
-    <span class="detail-image-title" data-image-role="title"></span>
-    <br/> <br/>
-    <div class="detail-image-description" data-image-role="description"></div>
+    <!-- Modal for Destination Description -->
+    <div class="modal fade" id="destModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            <h5 class="modal-title" id="exampleModalLongTitle">
+          <div class="detail-image-title" data-image-role="title"></div>
+        </h5>
+          </div>
+          <div class="modal-body">
+            <div class="detail-image-container">
+              <div class="detail-image-frame">
+                <img class="detail-image" data-image-role="target" src="img/bali-indonesia.jpg" alt="">
+                <br><br>
+                <h4>Description:</h4>
+                <div class="detail-image-description" data-image-role="description"></div>
+                <h4>Rating:</h4>
+                <!--TODO: Make this number dynamic, it should be the average of the Voted Rating-->
+                <div class="detail-image-description">10/10.</div>
+                <div class="form-group">
+                  <h4>
+                    <label for="rateLocation">How would you rate this destination? </label>
+                    <input name="rateLocation" id="rating" value="10">
+                  </h4>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <!--TODO: This button should update the average rating of the destination-->
+            <button type="button" class="btn btn-primary">Vote</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</main>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
-<script type="text/javascript" src="scripts/dashboard.js"></script>
-<script type="text/javascript" src="/dpd.js"></script>
-<script src="scripts/formHandler.js" charset="utf-8"></script>
-<script src="scripts/remotedatastores.js" charset="utf-8"></script>
-<script src="scripts/datastore.js" charset="utf-8"></script>
-<script src="scripts/user.js" charset="utf-8"></script>
-<script src="scripts/main.js" charset="utf-8"></script>
+    <!--Modal for Posting-->
+    <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            <h5 class="modal-title" id="exampleModalLabel">
+          <div class="detail-image-title">Post Your Travel</div>
+        </h5>
+          </div>
+          <div class="modal-body">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <form action="fileupload" enctype="multipart/form-data" data-picture-form="form">
+                  <div class="form-group">
+                    <label for="Location">Where did you go?</label>
+                    <input class="form-control" name="Location" id="name" autofocus required>
+                  </div>
+                  <div class="form-group">
+                    <label for="locationComment">Describe the location</label>
+                    <textarea class="form-control" rows="5" name="locationComment" id="description" autofocus required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="rateLocation">How would you rate your stay? </label>
+                    <input name="rateLocation" id="ratingPost" value="10">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="places-submit" onclick="window.location.reload()">Submit</button>
+                  </div>
+                    <label for="uploadPic">Please upload a picture of your destination</label>
+                    <input id="fileinput" type="file" name="file" value="file" accept=".jpg,.png,.gif">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-image-container">
+      <div class="detail-image-frame">
+        <img id="preview" class="detail-image-preview" data-image-role="target" src="img/travel-destinations.jpg" alt="">
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+  <script type="text/javascript" src="scripts/dashboard.js"></script>
+  <script type="text/javascript" src="/dpd.js"></script>
+  <script src="scripts/dpd-places-api.js" charset="utf-8"></script>
+  <script type="text/javascript" src="/dpd.js"></script>
+  <script src="scripts/formHandler.js" charset="utf-8"></script>
+  <script src="scripts/remotedatastores.js" charset="utf-8"></script>
+  <script src="scripts/datastore.js" charset="utf-8"></script>
+  <script src="scripts/user.js" charset="utf-8"></script>
+  <script src="scripts/main.js" charset="utf-8"></script>
 
 </body>
+
 </html>
